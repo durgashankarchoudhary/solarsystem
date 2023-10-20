@@ -7,199 +7,146 @@ body {
     background: black;
 }
 
-.planet, .sun {
+.planet,
+.sun {
     display: flex;
-    border-radius: 50%;
     position: fixed;
-    transform: rotate(360deg);
-    animation: rotate 10s linear infinite;
     justify-content: center;
     align-items: center;
+    height: var(--size);
+    width: var(--size);
 }
 
 .sun {
-    height: 10vmin;
-    width: 10vmin;
-    background: yellow;
-    top: calc(50vh - 5vmin);
-    left: calc(50vw - 5vmin);
+    --size: calc(1vmin * 10);
+    top: calc(50vh - (var(--size) / 2));
+    left: calc(50vw - (var(--size) / 2));
+}
+
+.planet {
+    animation: rotation var(--rotduration) linear infinite;
+    top: calc(50vh - var(--size) / 2);
 }
 
 .mercury {
-    height: 1vmin;
-    width: 1vmin;
-    background: brown;
-    top: calc(50vh - .5vmin);
+    --size: 1vmin;
     left: calc(50vw + 6.5vmin);
-    animation: rotation 0.48s linear infinite;
+    --rotduration: 0.48s;
     transform-origin: -6.5vmin;
 }
 
 .venus {
-    height: 1.5vmin;
-    width: 1.5vmin;
-    background: goldenrod;
-    top: calc(50vh - .75vmin);
+    --size: calc(1vmin * 1.5);
     left: calc(50vw + 9vmin);
-    animation: rotation 1.23s linear infinite;
+    --rotduration: 1.23s;
     transform-origin: -9vmin;
 }
 
 .earth {
-    height: 2vmin;
-    width: 2vmin;
-    background: blue;
-    top: calc(50vh - 1vmin);
+    --size: calc(1vmin * 2);
     left: calc(50vw + 12vmin);
-    animation: rotation 2s linear infinite;
+    --rotduration: 2s;
     transform-origin: -12vmin;
 }
 
 .mars {
-    height: 1.5vmin;
-    width: 1.5vmin;
-    background: red;
-    top: calc(50vh - .75vmin);
+    --size: calc(1vmin * 1.5);
     left: calc(50vw + 15.5vmin);
-    animation: rotation 5.41s linear infinite;
+    --rotduration: 5.41s;
     transform-origin: -15.5vmin;
 }
 
 .jupiter {
-    height: 8vmin;
-    width: 8vmin;
-    background: greenyellow;
-    top: calc(50vh - 4vmin);
+    --size: calc(1vmin * 8);
     left: calc(50vw + 18.5vmin);
-    animation: rotation 23.74s linear infinite;
+    --rotduration: 23.74s;
     transform-origin: -18.5vmin;
 }
 
 .saturn {
-    height: 7vmin;
-    width: 7vmin;
-    background: lightgreen;
-    top: calc(50vh - 3.5vmin);
+    --size: calc(1vmin * 7);
     left: calc(50vw + 28vmin);
-    animation: rotation 58.95s linear infinite;
+    --rotduration: 58.95s;
     transform-origin: -28vmin;
 }
 
 .uranus {
-    height: 4vmin;
-    width: 4vmin;
-    background: lightblue;
-    top: calc(50vh - 2vmin);
+    --size: calc(1vmin * 4);
     left: calc(50vw + 35.5vmin);
-    animation: rotation 168.15s linear infinite;
+    --rotduration: 168.15s;
     transform-origin: -35.5vmin;
 }
 
 .neptune {
-    height: 4vmin;
-    width: 4vmin;
-    background: skyblue;
-    top: calc(50vh - 2vmin);
+    --size: calc(1vmin * 4);
     left: calc(50vw + 41vmin);
-    animation: rotation 329.81s linear infinite;
+    --rotduration: 329.81s;
     transform-origin: -41vmin;
 }
 
 .pluto {
-    height: 1vmin;
-    width: 1vmin;
-    background: wheat;
-    top: calc(50vh - 0.5vmin);
+    --size: calc(1vmin * 1);
     left: calc(50vw + 46.5vmin);
-    animation: rotation 496.22s linear infinite;
+    --rotduration: 496.22s;
     transform-origin: -46.5vmin;
 }
 
 img {
-    height: 100%;
-    width: auto;
-    align-items: center;
-    justify-content: center;
+    max-width: 100%;
 }
 
 @keyframes rotation {
     from {
         transform: rotate(0deg);
     }
+
     to {
         transform: rotate(-360deg);
     }
 }
 
-.sun, .planet {
-    background: none;
-}
-
 .path {
     position: fixed;
     border-radius: 50%;
-    border: .5px dashed rgb(150, 145, 145);
+    border: 0.5px dashed rgb(150, 145, 145);
+    height: var(--pathsize);
+    width: var(--pathsize);
+    top: calc(50vh - (var(--pathsize)/2) - 1px);
+    left: calc(50vw - (var(--pathsize)/2) - 1px);
 }
 
 .mercurypath {
-    height: 14vmin;
-    width: 14vmin;
-    top: calc(50vh - 7vmin - 1px);
-    left: calc(50vw - 7vmin - 1px);
+    --pathsize: calc(1vmin * 14);
 }
 
 .venuspath {
-    height: 19.5vmin;
-    width: 19.5vmin;
-    top: calc(50vh - 9.75vmin - 1px);
-    left: calc(50vw - 9.75vmin - 1px);
+    --pathsize: calc(1vmin * 19.5);
 }
 
 .earthpath {
-    height: 26vmin;
-    width: 26vmin;
-    top: calc(50vh - 13vmin - 1px);
-    left: calc(50vw - 13vmin - 1px);
+    --pathsize: calc(1vmin * 26);
 }
 
 .marspath {
-    height: 32.5vmin;
-    width: 32.5vmin;
-    top: calc(50vh - 16.25vmin - 1px);
-    left: calc(50vw - 16.25vmin - 1px);
+    --pathsize: calc(1vmin * 32.5);
 }
 
 .jupiterpath {
-    height: 45vmin;
-    width: 45vmin;
-    top: calc(50vh - 22.5vmin - 1px);
-    left: calc(50vw - 22.5vmin - 1px);
+    --pathsize: calc(1vmin * 45);
 }
 
 .saturnpath {
-    height: 63vmin;
-    width: 63vmin;
-    top: calc(50vh - 31.5vmin - 1px);
-    left: calc(50vw - 31.5vmin - 1px);
+    --pathsize: calc(1vmin * 63);
 }
 
 .uranuspath {
-    height: 75vmin;
-    width: 75vmin;
-    top: calc(50vh - 37.5vmin - 1px);
-    left: calc(50vw - 37.5vmin - 1px);
+    --pathsize: calc(1vmin * 75);
 }
 
 .neptunepath {
-    height: 86vmin;
-    width: 86vmin;
-    top: calc(50vh - 43vmin - 1px);
-    left: calc(50vw - 43vmin - 1px);
+    --pathsize: calc(1vmin * 86);
 }
 
 .plutopath {
-    height: 94vmin;
-    width: 94vmin;
-    top: calc(50vh - 47vmin - 1px);
-    left: calc(50vw - 47vmin - 1px);
+    --pathsize: calc(1vmin * 94);
 }
