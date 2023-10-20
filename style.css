@@ -8,6 +8,7 @@ body {
 }
 
 .planet, .sun {
+    display: flex;
     border-radius: 50%;
     position: fixed;
     transform: rotate(360deg);
@@ -19,6 +20,7 @@ body {
 .sun {
     height: 10vmin;
     width: 10vmin;
+    background: yellow;
     top: calc(50vh - 5vmin);
     left: calc(50vw - 5vmin);
 }
@@ -129,77 +131,75 @@ img {
     }
 }
 
-.planet {
+.sun, .planet {
     background: none;
 }
 
 .path {
     position: fixed;
     border-radius: 50%;
-    border-color: rgb(34, 34, 34);
-    border-style: dashed;
-    border-width: .0001vmin;
+    border: .5px dashed rgb(150, 145, 145);
 }
 
 .mercurypath {
     height: 14vmin;
     width: 14vmin;
-    top: calc(50vh - 7vmin);
-    left: calc(50vw - 7vmin);
+    top: calc(50vh - 7vmin - 1px);
+    left: calc(50vw - 7vmin - 1px);
 }
 
 .venuspath {
     height: 19.5vmin;
     width: 19.5vmin;
-    top: calc(50vh - 9.75vmin);
-    left: calc(50vw - 9.75vmin);
+    top: calc(50vh - 9.75vmin - 1px);
+    left: calc(50vw - 9.75vmin - 1px);
 }
 
 .earthpath {
     height: 26vmin;
     width: 26vmin;
-    top: calc(50vh - 13vmin);
-    left: calc(50vw - 13vmin);
+    top: calc(50vh - 13vmin - 1px);
+    left: calc(50vw - 13vmin - 1px);
 }
 
 .marspath {
     height: 32.5vmin;
     width: 32.5vmin;
-    top: calc(50vh - 16.25vmin);
-    left: calc(50vw - 16.25vmin);
+    top: calc(50vh - 16.25vmin - 1px);
+    left: calc(50vw - 16.25vmin - 1px);
 }
 
 .jupiterpath {
     height: 45vmin;
     width: 45vmin;
-    top: calc(50vh - 22.5vmin);
-    left: calc(50vw - 22.5vmin);
+    top: calc(50vh - 22.5vmin - 1px);
+    left: calc(50vw - 22.5vmin - 1px);
 }
 
 .saturnpath {
     height: 63vmin;
     width: 63vmin;
-    top: calc(50vh - 31.5vmin);
-    left: calc(50vw - 31.5vmin);
+    top: calc(50vh - 31.5vmin - 1px);
+    left: calc(50vw - 31.5vmin - 1px);
 }
 
 .uranuspath {
     height: 75vmin;
     width: 75vmin;
-    top: calc(50vh - 37.5vmin);
-    left: calc(50vw - 37.5vmin);
+    top: calc(50vh - 37.5vmin - 1px);
+    left: calc(50vw - 37.5vmin - 1px);
 }
 
 .neptunepath {
     height: 86vmin;
     width: 86vmin;
-    top: calc(50vh - 43vmin);
-    left: calc(50vw - 43vmin);
+    top: calc(50vh - 43vmin - 1px);
+    left: calc(50vw - 43vmin - 1px);
 }
 
 .plutopath {
     height: 94vmin;
     width: 94vmin;
-    top: calc(50vh - 47vmin);
-    left: calc(50vw - 47vmin);
+    top: calc(50vh - 47vmin - 1px);
+    left: calc(50vw - 47vmin - 1px);
 }
