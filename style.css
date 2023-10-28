@@ -31,63 +31,63 @@ body {
 .mercury {
     --size: 1vmin;
     left: calc(50vw + 6.5vmin);
-    --rotduration: 0.48s;
+    --rotduration: 5s;
     transform-origin: -6.5vmin;
 }
 
 .venus {
     --size: calc(1vmin * 1.5);
     left: calc(50vw + 9vmin);
-    --rotduration: 1.23s;
+    --rotduration: 7s;
     transform-origin: -9vmin;
 }
 
 .earth {
     --size: calc(1vmin * 2);
     left: calc(50vw + 12vmin);
-    --rotduration: 2s;
+    --rotduration: 10s;
     transform-origin: -12vmin;
 }
 
 .mars {
     --size: calc(1vmin * 1.5);
     left: calc(50vw + 15.5vmin);
-    --rotduration: 5.41s;
+    --rotduration: 15s;
     transform-origin: -15.5vmin;
 }
 
 .jupiter {
     --size: calc(1vmin * 8);
     left: calc(50vw + 18.5vmin);
-    --rotduration: 23.74s;
+    --rotduration: 25s;
     transform-origin: -18.5vmin;
 }
 
 .saturn {
     --size: calc(1vmin * 7);
     left: calc(50vw + 28vmin);
-    --rotduration: 58.95s;
+    --rotduration: 33s;
     transform-origin: -28vmin;
 }
 
 .uranus {
     --size: calc(1vmin * 4);
     left: calc(50vw + 35.5vmin);
-    --rotduration: 168.15s;
+    --rotduration: 40s;
     transform-origin: -35.5vmin;
 }
 
 .neptune {
     --size: calc(1vmin * 4);
     left: calc(50vw + 41vmin);
-    --rotduration: 329.81s;
+    --rotduration: 49s;
     transform-origin: -41vmin;
 }
 
 .pluto {
     --size: calc(1vmin * 1);
     left: calc(50vw + 46.5vmin);
-    --rotduration: 496.22s;
+    --rotduration: 57s;
     transform-origin: -46.5vmin;
 }
 
