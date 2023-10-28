@@ -18,7 +18,7 @@ body {
 }
 
 .sun {
-    --size: calc(1vmin * 10);
+    --size: 10vmin;
     top: calc(50vh - (var(--size) / 2));
     left: calc(50vw - (var(--size) / 2));
 }
@@ -29,86 +29,150 @@ body {
 }
 
 .mercury {
-    --size: 1vmin;
-    left: calc(50vw + 6.5vmin);
+    --size: 2vmin;
+    left: calc(50vw + 6vmin);
     --rotduration: 15s;
-    transform-origin: -6.5vmin;
+    --rotorigin: -6vmin;
 }
 
 .venus {
-    --size: calc(1vmin * 1.5);
-    left: calc(50vw + 9vmin);
+    --size: 2vmin;
+    left: calc(50vw + 8.75vmin);
     --rotduration: 19s;
-    transform-origin: -9vmin;
+    --rotorigin: -8.75vmin;
 }
 
 .earth {
-    --size: calc(1vmin * 2);
-    left: calc(50vw + 12vmin);
+    --size: 3vmin;
+    left: calc(50vw + 11.5vmin);
     --rotduration: 24s;
-    transform-origin: -12vmin;
+    --rotorigin: -11.5vmin;
 }
 
 .mars {
-    --size: calc(1vmin * 1.5);
-    left: calc(50vw + 15.5vmin);
+    --size: 2vmin;
+    left: calc(50vw + 15.25vmin);
     --rotduration: 30s;
-    transform-origin: -15.5vmin;
+    --rotorigin: -15.25vmin;
 }
 
 .jupiter {
-    --size: calc(1vmin * 8);
+    --size: 8vmin;
     left: calc(50vw + 18.5vmin);
     --rotduration: 37s;
-    transform-origin: -18.5vmin;
+    --rotorigin: -18.5vmin;
 }
 
 .saturn {
-    --size: calc(1vmin * 7);
+    --size: 7vmin;
     left: calc(50vw + 28vmin);
     --rotduration: 45s;
-    transform-origin: -28vmin;
+    --rotorigin: -28vmin;
 }
 
 .uranus {
-    --size: calc(1vmin * 4);
+    --size: 4vmin;
     left: calc(50vw + 35.5vmin);
     --rotduration: 54s;
-    transform-origin: -35.5vmin;
+    --rotorigin: -35.5vmin;
 }
 
 .neptune {
-    --size: calc(1vmin * 4);
+    --size: 4vmin;
     left: calc(50vw + 41vmin);
     --rotduration: 64s;
-    transform-origin: -41vmin;
+    --rotorigin: -41vmin;
 }
 
 .pluto {
-    --size: calc(1vmin * 1);
-    left: calc(50vw + 46.5vmin);
+    --size: 2vmin;
+    left: calc(50vw + 46vmin);
     --rotduration: 75s;
-    transform-origin: -46.5vmin;
+    --rotorigin: -46vmin;
 }
 
 img {
     max-width: 100%;
+    animation: spin 2s linear infinite;
 }
 
 @keyframes rotation {
     from {
         transform: rotate(0deg);
+        transform-origin: var(--rotorigin);
     }
 
     to {
         transform: rotate(-360deg);
+        transform-origin: var(--rotorigin);
     }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+        transform-origin: center;
+    }
+
+    to {
+        transform: rotate(360deg);
+        transform-origin: center;
+    }
+}
+
+.spin{
+    animation: spin var(--rotduration) linear infinite;
+}
+
+.name {
+    color: white;
+    font-size: calc(1.5vmin);
+}
+
+.sunname {
+    top: calc(50vh - (var(--size) / 2) + 10vmin/2);
+}
+
+.mercuryname {
+    top: calc(50vh - (var(--size) / 2) + 3vmin/2);
+}
+
+.venusname {
+    top: calc(50vh - (var(--size) / 2) + 3vmin/2);
+}
+
+.earthname {
+    top: calc(50vh - (var(--size) / 2) + 4vmin/2);
+}
+
+.marsname {
+    top: calc(50vh - (var(--size) / 2) + 3vmin/2);
+}
+
+.jupitername {
+    top: calc(50vh - (var(--size) / 2) + 10vmin/2);
+}
+
+.saturnname {
+    top: calc(50vh - (var(--size) / 2) + 6vmin/2);
+}
+
+.uranusname {
+    top: calc(50vh - (var(--size) / 2) + 5vmin/2);
+}
+
+.neptunename {
+    top: calc(50vh - (var(--size) / 2) + 5vmin/2);
+}
+
+.plutoname {
+    top: calc(50vh - (var(--size) / 2) + 3vmin/2);
 }
 
 .path {
     position: fixed;
     border-radius: 50%;
-    border: 0.5px dashed rgb(150, 145, 145);
+    border: 0.5px dotted rgb(150, 145, 145);
     height: var(--pathsize);
     width: var(--pathsize);
     top: calc(50vh - (var(--pathsize)/2) - 1px);
